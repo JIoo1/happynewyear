@@ -5,10 +5,11 @@
 	<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
     <meta name="theme-color" content="#880043">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700,700italic&amp;subset=latin,vietnamese' rel='stylesheet' type='text/css'/>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700,700italic&amp;subset=latin,vietnamese' rel='stylesheet' type='text/css'/>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,700|Open+Sans:800' rel='stylesheet' type='text/css'/>
-	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'/> -->
 	<link href='http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css' rel='stylesheet'/>
+	<link rel="stylesheet" href="font/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css">
 	<link href="fireworks.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="component.css" />
 	<link href="soon.min.css" rel="stylesheet"/>		
@@ -560,7 +561,7 @@ $(document).ready(function(){
 	
 	$(".SLToday").html("Hôm nay: " + vnCurrentTime.format("DD-MM-YYYY") + " <i class='fa fa-calendar'></i> " + ld.day + "-" + ld.month + "-" + ld.year + ", " + getYearCanChi(ld.year));
 	
-	var monkeyCD = ["Linh-vat-ran-2025.png", "Linh-vat-ran-2025.png", "Linh-vat-ran-2025.png", "Linh-vat-ran-2025.png"];
+	var TyCD = ["Linh-vat-ran-2025.png", "Linh-vat-ran-2025.png", "Linh-vat-ran-2025.png", "Linh-vat-ran-2025.png"];
 	var textCD = [
 		"Lưu Dũng Kính chúc bạn cùng gia đình tràn đầy sức khỏe, thành công và hạnh phúc, 8386.",
 		"Năm mới Tết đến. Rước hên vào nhà. Quà cáp bao la. Mọi nhà no đủ. Vàng bạc đầy hũ. Gia chủ phát tài. Già trẻ gái trai. Sum vầy hạnh phúc. Cầu tài chúc phúc. Lộc đến quanh năm. An khang thịnh vượng!",
@@ -568,16 +569,16 @@ $(document).ready(function(){
 		"Chúc bạn: 12 tháng phú quý, 365 ngày phát tài, 8760 giờ sung túc, 525600 phút thành công 31536000 giây vạn sự như ý.",
 		"Sang năm mới chúc mọi người có một bầu trời sức khoẻ, một biển cả tình thương, một đại dương tình cảm, một điệp khúc tình yêu, một người yêu chung thủy, một tình bạn mênh mông, một gia đình thịnh vượng."
 	];
-	var monkeyX = $(window).width()/2 - $(".soon-group").outerWidth()/2 - 110 - 10;
-	var idcd = Math.floor(Math.random() * monkeyCD.length);
+	var TyX = $(window).width()/2 - $(".soon-group").outerWidth()/2 - 110 - 10;
+	var idcd = Math.floor(Math.random() * TyCD.length);
 	
-	var monkey = '<div id="mcd" style="display:block;width:140px; height:182px;position: absolute;z-index:30; top:0; left: ' + monkeyX + 'px"><div class="mkCD" style="background: transparent url('+ monkeyCD[idcd] +') center center no-repeat;background-size:100% 100%;"></div><div class="textCD"><div class="texts1">Chúc Mừng Năm Mới 2022</div><div class="texts1">'+ textCD[idcd] +'</div></div></div>';
+	var Ty = '<div id="mcd" style="display:block;width:140px; height:182px;position: absolute;z-index:30; top:0; left: ' + TyX + 'px"><div class="mkCD" style="background: transparent url('+ TyCD[idcd] +') center center no-repeat;background-size:100% 100%;"></div><div class="textCD"><div class="texts1">Chúc Mừng Năm Mới 2022</div><div class="texts1">'+ textCD[idcd] +'</div></div></div>';
 	
-	$("#count-down-wrapper").append(monkey);
+	$("#count-down-wrapper").append(Ty);
 	
 	$(window).resize(function(){
-		monkeyX = $(window).width()/2 - $(".soon-group").outerWidth()/2 - 110 - 10;
-		$("#mcd").css("left", monkeyX+"px");
+		TyX = $(window).width()/2 - $(".soon-group").outerWidth()/2 - 110 - 10;
+		$("#mcd").css("left", TyX+"px");
 	});
 	
 	$('.texts1').textillate({		
